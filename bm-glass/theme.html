@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-Style-type" content="text/css" />
+<meta http-equiv="Content-Script-type" content="text/javascript" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link rel="shortcut icon" href="<{$xoops_url}>/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/themes/<{$xoops_theme}>/common/css/style.css" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/ol.gif" alt="" /></td>
+<td class="oo"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="1" height="27" /></td>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/or.gif" alt="" /></td>
+</tr>
+<tr>
+<td class="ll" width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="27" height="1" /></td>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr id="header">
+<td id="headerlogo"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/logo.gif" alt="BLUE MIRAGE" /><!--<div id="headername"><{$xoops_sitename}></div>--></td>
+<td id="headerbanner" align="right"><!--<{$xoops_banner}>--></td>
+</tr>
+</table>
+</td>
+<td class="rr" width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="27" height="1" /></td>
+</tr>
+<tr>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/ul.gif" alt="" /></td>
+<td class="uu"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="1" height="28" /></td>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/ur.gif" alt="" /></td>
+</tr>
+</table>
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/ol.gif" alt="" /></td>
+<td class="oo"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="1" height="27" /></td>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/or.gif" alt="" /></td>
+</tr>
+<tr>
+<td class="ll" width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="27" height="1" /></td>
+<td>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<form action="<{$xoops_url}>/search.php" method="post">
+<td id="headerbanner" align="right"><input type="hidden" name="action" value="results" /><input type="text" name="query" id="searchButton"/><input type="submit" name="searchSubmit" value="search" /></td>
+</form>
+</tr>
+</table>
+<table class="blockcolor" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td id="leftcolumn"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="1" height="5" /><br />
+<!-- Start left blocks loop -->
+<{foreach item=block from=$xoops_lblocks}>
+<{include file="bm-glass/theme_blockleft.html"}>
+<{/foreach}>
+<!-- End left blocks loop -->
+</td>
+<td id="centercolumn">
+<!-- Display center blocks if any -->
+<{if $xoops_showcblock == 1}>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td id="centerCcolumn" colspan="2">
+<!-- Start center-center blocks loop -->
+<{foreach item=block from=$xoops_ccblocks}>
+<{include file="bm-glass/theme_blockcenter_c.html"}>
+<{/foreach}>
+<!-- End center-center blocks loop -->
+</td>
+</tr>
+<tr>
+<td id="centerLcolumn">
+<!-- Start center-left blocks loop -->
+<{foreach item=block from=$xoops_clblocks}>
+<{include file="bm-glass/theme_blockcenter_l.html"}>
+<{/foreach}>
+<!-- End center-left blocks loop -->
+</td>
+<td id="centerRcolumn">
+<!-- Start center-right blocks loop -->
+<{foreach item=block from=$xoops_crblocks}>
+<{include file="bm-glass/theme_blockcenter_r.html"}>
+<{/foreach}>
+<!-- End center-right blocks loop -->
+</td>
+</tr>
+</table>
+<{/if}>
+<!-- End display center blocks -->
+<div id="content">
+<{$xoops_contents}>
+</div>
+</td>
+<{if $xoops_showrblock == 1}>
+<td id="rightcolumn"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="1" height="5" /><br />
+<!-- Start right blocks loop -->
+<{foreach item=block from=$xoops_rblocks}>
+<{include file="bm-glass/theme_blockright.html"}>
+<{/foreach}>
+<!-- End right blocks loop -->
+</td>
+<{/if}>
+</tr>
+</table>
+</td>
+<td class="rr" width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="27" height="1" /></td>
+</tr>
+<tr>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/ul.gif" alt="" /></td>
+<td class="uu"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="1" height="28" /></td>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/ur.gif" alt="" /></td>
+</tr>
+</table>
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/ol.gif" alt="" /></td>
+<td class="oo"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="1" height="27" /></td>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/or.gif" alt="" /></td>
+</tr>
+<tr>
+<td class="ll" width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="27" height="1" /></td>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr id="footerbar">
+<td id="copyright"><a href="http://www.bluemirage.com/" target="_top">Theme : BLUE MIRAGE</a> - <{$xoops_footer}></td>
+</tr>
+</table>
+</td>
+<td class="rr" width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="27" height="1" /></td>
+</tr>
+<tr>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/ul.gif" alt="" /></td>
+<td class="uu"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/spacer.gif" width="1" height="28" /></td>
+<td width="27"><img src="<{$xoops_url}>/themes/<{$xoops_theme}>/common/imgs/ur.gif" alt="" /></td>
+</tr>
+</table>
+</body>
+</html>
